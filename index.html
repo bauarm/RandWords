@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="сss/style.css">
+    <script src="https://use.fontawesome.com/12b79bf4f8.js"></script>
+    <style type="text/css"></style>
+</head>
+<header id="header_up_id" class="header_up">
+    <nav id="header_nav_id" class="header_nav ">
+        <a class="site_name" href="#">Randwords.</a>
+        <a class="header_nav_links" href="#">Главная</a>
+        <a class="header_nav_links" href="#">Инструкции</a>
+        <a class="header_nav_links" href="#">Вопросы</a>
+        <a class="header_nav_links" href="#">Статьи</a>
+        <a class="header_nav_links" href="#">Примеры</a>
+        <div class="header_nav__bwrap">
+            <button class="btn btn_chan btn_hv bbg_focus " id="">
+                <span data-type="" class="btn_ch_chr">LAT</span>
+            </button>
+            <button class="btn btn_chan btn_hv" id="">
+                <span data-type="" class="btn_ch_chr">RUS</span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<body clearfix>
+    <!-- <div  class='prelod' id='prel'></div>  -->
+    <div class="litter_count_parent" id="">
+        <div class="litter_footer">
+            <button class="btn btn_chan btn_hv" data-type="run" id="russ_run">
+                <span data-type="run_sp" class="btn_ch_chr">latin</span>
+            </button>
+            <button class="btn btn_chan btn_hv" data-type="run" id="soft_run">
+                <span data-type="run_sp" class="btn_ch_chr">soft</span>
+            </button>
+            <button class="btn btn_chan btn_hv" data-type="run" id="grub_run">
+                <span data-type="run_sp" class="btn_ch_chr">rude</span>
+            </button>
+            <button class="btn btn_chan btn_hv" data-type="run" id="rand_run">
+                <span data-type="run_sp" class="btn_ch_chr">rand</span>
+            </button>
+            <!--<button class="btn btn_chan btn_hv" data-type="run" id="anls" disabled class="btn_ch_chr">
+                <span  data-type="" >анализ</span></button>-->
+        </div>
+        <p class="snoska">редактор частотности букв</p>
+        <!--  -->
+        <div id="navLitter">
+            <div class="litter_count clearfix" id=""><span>A</span>
+                <input type="text" id="getA" class="litter_form" value="50" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>B</span>
+                <input type="text" id="getB" class="litter_form" value="8" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>C</span>
+                <input type="text" id="getV" class="litter_form" value="25" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>D</span>
+                <input type="text" id="getG" class="litter_form" value="7" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>E</span>
+                <input type="text" id="getD" class="litter_form" value="14" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>F</span>
+                <input type="text" id="getIE" class="litter_form" value="48" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>G</span>
+                <input type="text" id="getGE" class="litter_form" value="4" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>H</span>
+                <input type="text" id="getZ" class="litter_form" value="9" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>I</span>
+                <input type="text" id="getI" class="litter_form" value="45" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>J</span>
+                <input type="text" id="getAI" class="litter_form" value="6" onchange="" />
+            </div>
+            <!--  -->
+            <div class="litter_count" id=""><span>K</span>
+                <input type="text" id="getK" class="litter_form" value="20" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>L</span>
+                <input type="text" id="getL" class="litter_form" value="26" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>M</span>
+                <input type="text" id="getM" class="litter_form" value="19" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>N</span>
+                <input type="text" id="getN" class="litter_form" value="37" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>O</span>
+                <input type="text" id="getO" class="litter_form" value="52" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>P</span>
+                <input type="text" id="getP" class="litter_form" value="20" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>Q</span>
+                <input type="text" id="getR" class="litter_form" value="32" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>R</span>
+                <input type="text" id="getS" class="litter_form" value="32" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>S</span>
+                <input type="text" id="getT" class="litter_form" value="37" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>T</span>
+                <input type="text" id="getU" class="litter_form" value="16" onchange="" />
+            </div>
+            <!--  -->
+            <div class="litter_count" id=""><span>U</span>
+                <input type="text" id="getF" class="litter_form" value="2" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>V</span>
+                <input type="text" id="getKH" class="litter_form" value="5" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>W</span>
+                <input type="text" id="getTS" class="litter_form" value="3" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>X</span>
+                <input type="text" id="getCH" class="litter_form" value="6" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>Y</span>
+                <input type="text" id="getSH" class="litter_form" value="4" onchange="" />
+            </div>
+            <div class="litter_count" id=""><span>Z</span>
+                <input type="text" id="getSHE" class="litter_form" value="2" onchange="" />
+            </div>
+        </div>
+        <!--  -->
+        <div>
+            <input id="mnj" type="range" min="0" max="10" step="1" value="0">
+        </div>
+        <!--  -->
+        <div class="info_field ">
+            <div class="info_count"> <span>гласные</span>
+                <input type="text" id="glasSum" class="info_form" value="10" disabled/>
+            </div>
+            <div class="info_count"> <span>согласные</span>
+                <input type="text" id="sogSum" class="info_form" value="10" disabled/>
+            </div>
+            <div class="info_count"> <span>всего</span>
+                <input type="text" id="allSum" class="info_form" value="10" disabled/>
+            </div>
+        </div>
+        <!--  -->
+        <div class="litter_footer n_slct">
+            <div id="btn_antx" class="btn_bg bbg">анализ текста</div>
+        </div>
+    </div>
+    <div class="result-cont-main clearfix ">
+        <div class="save-hidden" id="svhd">
+            <div class="closer_wrap n_slct"><span id="svhCloser">x</span></div>
+            <p id="svWord"></p>
+        </div>
+        <div class="txan-hidden" id="txan">
+            <div class="tar_wrap">
+                <textarea id="txanfld" spellcheck="false" placeholder="введите текст на латинице для анализа"></textarea>
+            </div>
+            <div class="closer_txan n_slct"><i class="icon-trash-empty" aria-hidden="true"></i><span id="txBtCls">x</span></div>
+        </div>
+        <div class="result-cont-left clearfix" id="rec_cl">
+            <div class="inputblock">
+                <input type="text" class="input_word_st" id="one_word" spellcheck="false" placeholder="введите слово образец" maxlength="12" value="" />
+                <button class=" btn_sm" id="btn1clean" onclick=""><i class="icon-trash-empty" aria-hidden="true"></i></button>
+                <button id="btn_one" class="">GENERATE</button>
+                <button class=" btn_sm" id="rand_one" onclick=""><i class="icon-shuffle" aria-hidden="true"></i></button>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span> </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+        </div>
+        <div class="result-cont-right clearfix" id="res_cr">
+            <div class="inputblock">
+                <input type="text" class="input_word_st" id="two_word" spellcheck="false" placeholder="введите слово образец" maxlength="12" value="" />
+                <button class="btn_sm" id="btn2clean" onclick=""><i class="icon-trash-empty" aria-hidden="true"></i></button>
+                <button id="btn_two" onclick="">GENERATE</button>
+                <button class="btn_sm" id="rand_two" onclick=""><i class="icon-shuffle" aria-hidden="true"></i></button>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            </div>
+        </div>
+        <div class="res-footer n_slct">
+            <div id="svListShow" class="btn_bg bbg"><span>сохраненные слова </span><span id="sv_count" class="bbt_count">0</span></div>
+        </div>
+    </div>
+    <script src="js/event.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/wordrand.js"></script>
+    <script src="js/chastotnik.js"></script>
+</body>
+
+</html>
