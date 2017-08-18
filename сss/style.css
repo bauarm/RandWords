@@ -1,0 +1,82 @@
+@import url(reset.css);
+@import url(clearfix.css);
+@import url(fontello.css);
+@import url(rand_1.css);
+@import url(LittNum.css);
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Play&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+
+
+
+html, body {
+width: 100%;
+height: 100%;
+background-color: #e4e4e4;
+/*padding:0;
+margin:0;*/
+}
+
+
+
+
+
+
+/* HEADER NAVI LINE */
+.header_up {
+/*position: fixed ;*/
+background-color: RGBA(0, 0, 0, 0.6);
+width: 100%;
+z-index:10;
+border-top: 1px solid #009933;
+box-shadow: 0px 0px 5px #CCC;
+/*top: 0;*/
+}
+
+/*Start navigation block*/
+.header_nav {
+text-align: right;
+}
+.header_nav__bwrap{
+	display: inline-block;
+	margin-right: 15px;
+}
+.header_nav__bwrap button{
+	margin-right: 10px;
+}
+/*navigation links*/
+.header_nav_links{
+display: inline-block;
+font-family: 'Play', sans-serif;
+font-size: 100%;
+text-transform: lowercase;
+text-decoration: none;
+text-align: center; 
+margin-right: 2%;
+color: white;
+/*height: 34px;*/
+line-height: 180%;
+transition: color .3s;
+}
+.header_nav_links:hover  {
+color: #00cc00;
+text-shadow: 0 0 1em #33cc33;
+}
+.site_name {
+float: left;
+font-family: 'Russo One', sans-serif;
+/*text-transform: lowercase;*/
+text-decoration: none;
+text-align: center; 
+color: white;
+font-size: 160%;
+margin-top: 3px;
+margin-left: 1%;
+/*line-height: 120%;*/
+transition: text-shadow .3s;
+}
+.site_name:hover  {
+text-shadow: 0 0 1em white;
+}
