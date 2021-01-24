@@ -1,0 +1,105 @@
+body
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	flex-direction: column;	
+	background-color: #eff7e1;
+}
+
+textarea:focus, input:focus{
+outline: none;
+}
+
+#textfield{
+	resize: none;
+	border: none;
+	width: 30%;
+	height: 300px;
+	margin: 30px;
+	padding: 20px;
+}
+
+#target{
+	background-color: #dde1e7;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 30%;
+	box-shadow: -3px -3px 7px rgba(94,104,121,0.288),
+				2px 2px 5px rgba(94,104,121,0.288);
+	margin: 20px;
+	border-radius: 10px;
+}
+
+#target div{
+	cursor: pointer;
+	background-color: #dde1e7;
+	color: grey;
+	margin: 5px ;
+	padding: 5px 2px 2px 2px ;
+	text-align: center;
+	font-size: 20px;
+	user-select: none;
+	box-shadow: -1px -1px 5px rgba(94,104,121,0.288),
+				2px 2px 5px rgba(94,104,121,0.288);
+}
+
+#target div span{
+	display: block;
+	padding: 2px;
+	text-transform: uppercase;
+	/*background-color: red;*/
+	
+}
+
+#target input{
+	width: 25px;
+	background-color: orange;
+	text-align: center;
+	font: bold  70% sans-serif;
+	border-style:none;
+}
+
+
+
+
+.consonant-letter{
+	color: blue;
+
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4347D9;
+    border-color: #357ebd;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    user-select: none;
+}
