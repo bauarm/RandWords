@@ -330,3 +330,48 @@ function makeVovel()
     i=0;
     console.log(arr);
     };
+
+
+mainAlf={
+    arr:[]
+}
+
+
+function getValue(ids, tags) { //getValue('target','input')
+    let temp = [];
+    let tableElem = document.getElementById(ids);
+    let elements = tableElem.getElementsByTagName(tags);
+    for ( i = 0; i < elements.length; i++) {
+        let input = elements[i];
+        let prot = input.value;
+        temp.push(prot);
+        }
+    return temp;
+    };
+
+function getLitters(ids, tags) { //getLitters('target', 'span')
+    let temp = [];
+    let tableElem = document.getElementById(ids);
+    let elements = tableElem.getElementsByTagName(tags);
+    for ( i = 0; i < elements.length; i++) {
+        let input = elements[i];
+        let prot = input.textContent;
+        temp.push(prot.toLowerCase());
+        }
+    return temp;
+    };
+
+function makeArr(){ //makeArr()
+    let litArr = [];
+    let litter = getLitters('target', 'span');
+    let elements = getValue('target','input');
+    for ( i = 0; i < elements.length; i++) {
+        var input = elements[i];
+        var litTemp = litter[i];
+        for(j = 0; j < input; j++){
+            litArr.push(litTemp);
+            }
+        }
+    mainAlf.arr=litArr;
+    return litArr;
+    };
