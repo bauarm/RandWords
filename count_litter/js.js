@@ -6,11 +6,11 @@
 addEventListener('click', function(e){
     console.log(e.target)
 })*/
-
+/*
 addEventListener('focus', function(e){
     console.log('e.targe')
 })
-
+*/
 function getText() { //
     
     var arr_count=new Map();
@@ -103,20 +103,31 @@ function createDivLitter(){
     for (let pair of getMap) 
         {
         var newDiv = document.createElement("div");
+            newDiv.classList.add("litterbox");
         var newSpan = document.createElement("span");  
         var newInput = document.createElement("input");  
-        //console.log(`Ключ = ${pair[0]}, значение = ${pair[1]}`);
         newSpan.innerHTML=pair[0];
         newInput.value=pair[1];
         newDiv.append(newSpan);
         newDiv.append(newInput);
         target_div.append(newDiv);
-        }
+        };
     
-    //console.log('childElementCount '+target_div.childElementCount);
+    };
 
-}
-
+function removeElemList()//createDivLitter()-->removeElemList()
+    {
+    let target_div = document.getElementById("target");
+    if (target_div.childElementCount>0) 
+        {
+        let elemLen=target_div.childElementCount;
+        for(let i=elemLen-1; i>-1; i--)
+            {
+            target.children[i].remove()
+            }
+        }
+    i=0;
+    };
 
 
 function clearingText(arrt){
@@ -171,47 +182,47 @@ function createDeleteButton(){
     
 }
 
-function removeElemList()
-    {
-    var target_div = document.getElementById("target");
-    if (target_div.childElementCount>0) 
-        {
-        var elemLen=target_div.childElementCount;
-        for(var i=elemLen-1; i>-1; i--)
-            {
-            target.children[i].remove()
-            }
-        }
-    i=0;
-    };
+
 
 
 const el = document.getElementById("fn_call");
 el.addEventListener("click", ()=>{createDivLitter(),statusViev()}, false);
 
-onclick=function(event)
+target.onclick=function(event)
 {
     if(event.target.nodeName=="SPAN")
         {
         //console.log(event.target)
         //console.log(event.target.parentNode.getAttribute('wr_selected'))
-        if(event.target.parentNode.getAttribute('wr_selected')!=="select")
+        if(event.target.parentNode.getAttribute('wr_selected')!=='select')
         	{
         	
-            //event.target.parentNode.remove()
-        	//event.target.parentNode.classList.add("selected-letter");#8FBC8F
-        	event.target.parentNode.style.backgroundColor = "#f2f3f7";
-          
-          event.target.parentNode.classList.add("selected");
-          event.target.parentNode.setAttribute("wr_selected",'select');
+            
+            event.target.parentNode.classList.remove('btn-danger','btn-primary');
+            event.target.parentNode.classList.add("btn-success");
+            event.target.parentNode.setAttribute("wr_selected",'select');
 
         	}
+        else if(event.target.parentNode.getAttribute('wr_selected')=='select' && event.target.parentNode.getAttribute('isPicked')=='picked')
+            {
+            if(event.target.parentNode.children[0].getAttribute('litter')== 'consonant'){
+                event.target.parentNode.classList.remove('btn-success');
+                event.target.parentNode.classList.add('btn-primary');
+                event.target.parentNode.setAttribute("wr_selected",'noselect');
+
+            }
+            if(event.target.parentNode.children[0].getAttribute('litter')== 'vovel'){
+                event.target.parentNode.classList.remove('btn-success');
+                event.target.parentNode.classList.add('btn-danger');
+                event.target.parentNode.setAttribute("wr_selected",'noselect');
+            }
+            
+
+            }
         else
         	{
-        	//event.target.parentNode.classList.remove("selected-letter");
         	
-          event.target.parentNode.style.backgroundColor= "#dde1e7"
-          event.target.parentNode.classList.remove("selected");
+            event.target.parentNode.classList.remove("btn-success");
             event.target.parentNode.setAttribute("wr_selected",'noselect');
 
         	}
@@ -231,7 +242,7 @@ function removeSelectedElements()
         for(var i=elemLen-1; i>-1; i--)
           {
           //console.log(target.children[i]);
-          if(target.children[i].className=="selected")
+          if(target.children[i].getAttribute('wr_selected')=="select")//target.children[i].getAttribute('wr_selected')=="select"
             {
             target.children[i].remove()
             }statusViev
@@ -271,40 +282,49 @@ const mCons = document.getElementById("mk-consonant");
 
 mCons.addEventListener("click", makeConsonant, false);
 
+
+
 function makeConsonant()
     {
-    arr=[];
-    var target_div = document.getElementById("target");
+    let arr=[];
+    let target_div = document.getElementById("target");
     if (target_div.childElementCount>0) 
         {
-        var elemLen=target_div.childElementCount;
-        for(var i=elemLen-1; i>-1; i--)
+        let elemLen=target_div.childElementCount;
+        for(let i=elemLen-1; i>-1; i--)
           {
-            if(target.children[i].className=="selected")
+            if(target.children[i].getAttribute('wr_selected')=="select")
             {
-              arr.push(target.children[i].children[0].innerText);
-              target.children[i].children[0].setAttribute('litter', 'consonant'); //установка свойства буквы гласная или согласная
-              target.children[i].children[0].style.color = "#fff"; // установка цвета буквы на кнопке
+              
+                
+                
+                target.children[i].classList.remove('selected','btn-success','btn-danger');
+                target.children[i].setAttribute('isPicked','picked');
+              
+              
+                
+                target.children[i].classList.add("btn-primary");
 
-              target.children[i].children[1].style.color = "#fff"; // установка цвета буквы на кнопке
+                arr.push(target.children[i].children[0].innerText);
+                target.children[i].children[0].setAttribute('litter', 'consonant'); //установка свойства буквы гласная или согласная
+                
 
-
-              target.children[i].style.backgroundColor= "#428bca"
-              target.children[i].classList.remove("selected"); 
+              
+              
               target.children[i].setAttribute("wr_selected",'noselect');
             }
             
           }
         }
     i=0;
-    console.log(arr);
+    //console.log(arr);
     };
 
 
 const mVov = document.getElementById("mk-vovel");
 mVov.addEventListener("click", makeVovel, false);
 
-function makeVovel()
+function makeVovel()//glasn
     {
     arr=[];
     var target_div = document.getElementById("target");
@@ -314,14 +334,20 @@ function makeVovel()
         for(var i=elemLen-1; i>-1; i--)
           {
           
-          if(target.children[i].className=="selected")
+          if(target.children[i].getAttribute('wr_selected')=="select")
             {
+            
+            target.children[i].classList.remove('selected','btn-success','btn-primary'); 
+            target.children[i].setAttribute('isPicked','picked');
+            target.children[i].classList.add("btn-danger");
+
             arr.push(target.children[i].children[0].innerText);
             target.children[i].children[0].setAttribute('litter', 'vovel');
-            target.children[i].children[0].style.color = "#fff";
-            target.children[i].style.backgroundColor= "#d9534f"
-            target.children[i].classList.remove("selected"); 
+            
+            
             target.children[i].setAttribute("wr_selected",'noselect');
+            makeVocalArr(target.children[i].children[0].textContent,target.children[i].children[1].value)
+            //console.log('litter'+target.children[i].children[0].textContent,'count '+target.children[i].children[1].value)
             
             }
             
@@ -333,7 +359,8 @@ function makeVovel()
 
 
 mainAlf={
-    arr:[]
+    arr:[],
+    vocal:[]
 }
 
 
@@ -360,6 +387,15 @@ function getLitters(ids, tags) { //getLitters('target', 'span')
         }
     return temp;
     };
+
+function makeVocalArr(lit,amt){
+    let glas = [];
+    for(let i = 0; i < amt; i++){
+        mainAlf.vocal.push(lit);
+        glas.push(lit);
+        }
+    return glas;
+}
 
 function makeArr(){ //makeArr()
     let litArr = [];
