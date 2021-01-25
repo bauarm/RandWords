@@ -12,6 +12,20 @@ textarea:focus, input:focus{
 outline: none;
 }
 
+.litterbox{
+	cursor: pointer;
+	background-color: #dde1e7;
+	color: grey;
+	margin: 5px ;
+	padding: 5px 2px 2px 2px ;
+	text-align: center;
+	font-size: 20px;
+	user-select: none;
+	box-shadow: -1px -1px 5px rgba(94,104,121,0.288),
+				2px 2px 5px rgba(94,104,121,0.288);
+}
+
+
 #textfield{
 	resize: none;
 	border: none;
@@ -20,6 +34,11 @@ outline: none;
 	margin: 30px;
 	padding: 20px;
 }
+
+.selected{
+	 background-color: #ffabee;
+}
+
 
 #target{
 	background-color: #dde1e7;
@@ -33,18 +52,7 @@ outline: none;
 	border-radius: 10px;
 }
 
-#target div{
-	cursor: pointer;
-	background-color: #dde1e7;
-	color: grey;
-	margin: 5px ;
-	padding: 5px 2px 2px 2px ;
-	text-align: center;
-	font-size: 20px;
-	user-select: none;
-	box-shadow: -1px -1px 5px rgba(94,104,121,0.288),
-				2px 2px 5px rgba(94,104,121,0.288);
-}
+
 
 #target div span{
 	display: block;
