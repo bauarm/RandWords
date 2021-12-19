@@ -73,7 +73,7 @@ return sonr;
 //создание массива согласных
 function makeAccordArr(){
 var litters = makeArr();
-var temp = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','c','t','v','w','x','z'];
+var temp = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','c','t','v','w','x','z'];
 var con = [];
 for(g = 0; g < temp.length; g++){
 var element = temp[g];  
