@@ -1,3 +1,18 @@
+wordStorage={
+  dirtyText:[]
+}
+  
+  
+function getTextFromTextarea(areaId){//getTextFromTextarea('textfield')
+    let arr =[];
+    let prot = document.getElementById(areaId).value;
+      prot.toLowerCase();
+    let nameList = prot.split(' ');
+    wordStorage.dirtyText=nameList;
+    return nameList;
+}
+
+
 
 function textFromCharcode() { //textFromCharcode()-->clearCharcode()-->textToCharcode(text)
     let prot =clearCharcode().filter(element => element !== null);
