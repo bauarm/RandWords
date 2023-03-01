@@ -2,22 +2,37 @@
 
 function createDivLitter(){
     removeElemList()
-    var getMap=getText();
-    var target_div = document.getElementById("target");
+    let getMap=[['а',50,1],['б',20,2],['в',20,2],['г',20,2],['д',20,2],['е',20,0]];
+    let target_div = document.getElementById("target");
     for (let pair of getMap) 
         {
-        var newDiv = document.createElement("div");
+        let newSpan = document.createElement("span");  
+        let newInput = document.createElement("input"); 
+        let newDiv = document.createElement("div");
             newDiv.classList.add("litterbox");
-        var newSpan = document.createElement("span");  
-        var newInput = document.createElement("input");  
+            newDiv.setAttribute('isPicked','picked');
+            newDiv.setAttribute('wr_selected','noselect');
+
+            if(pair[2]==2){
+                newDiv.classList.add("btn-primary");
+                newSpan.setAttribute('litter', 'consonant');
+
+            }
+            if(pair[2]==1){
+                newDiv.classList.add("btn-danger");
+                newSpan.setAttribute('litter', 'vovel');
+            }
+        
         newSpan.innerHTML=pair[0];
         newInput.value=pair[1];
         newDiv.append(newSpan);
         newDiv.append(newInput);
         target_div.append(newDiv);
+        
         };
     
     };
+
 
 function removeElemList()//createDivLitter()-->removeElemList()
     {
@@ -123,11 +138,9 @@ textArea.addEventListener("input", statusViev, false);
 
 function statusViev(){
 	let literCount = document.getElementsByClassName('liter-count')[0];
-	
-	var prot = document.getElementById("textfield").value;
-  var len=prot.length;
-  
-  literCount.innerHTML=len;
+	let prot = document.getElementById("textfield").value;
+    let len=prot.length;
+    literCount.innerHTML=len;
 
 
   let wordCount = document.getElementsByClassName('word-count')[0];

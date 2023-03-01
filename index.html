@@ -138,13 +138,13 @@
         <!--  -->
         <div class="info_field ">
             <div class="info_count"> <span>гласные</span>
-                <input type="text" id="glasSum" class="info_form" value="10" disabled/>
+                <input type="text" id="glasSum" class="info_form" value="10" disabled />
             </div>
             <div class="info_count"> <span>согласные</span>
-                <input type="text" id="sogSum" class="info_form" value="10" disabled/>
+                <input type="text" id="sogSum" class="info_form" value="10" disabled />
             </div>
             <div class="info_count"> <span>всего</span>
-                <input type="text" id="allSum" class="info_form" value="10" disabled/>
+                <input type="text" id="allSum" class="info_form" value="10" disabled />
             </div>
         </div>
         <!--  -->
@@ -159,47 +159,75 @@
         </div>
         <div class="txan-hidden" id="txan">
             <div class="tar_wrap">
-                <textarea id="txanfld" spellcheck="false" placeholder="введите текст на латинице для анализа"></textarea>
+                <textarea id="txanfld" spellcheck="false"
+                    placeholder="введите текст на латинице для анализа"></textarea>
             </div>
-            <div class="closer_txan n_slct"><i class="icon-trash-empty" aria-hidden="true"></i><span id="txBtCls">x</span></div>
+            <div class="closer_txan n_slct"><i class="icon-trash-empty" aria-hidden="true"></i><span
+                    id="txBtCls">x</span></div>
         </div>
         <div class="result-cont-left clearfix" id="rec_cl">
             <div class="inputblock">
-                <input type="text" class="input_word_st" id="one_word" spellcheck="false" placeholder="введите слово образец" maxlength="12" value="" />
-                <button class=" btn_sm" id="btn1clean" onclick=""><i class="icon-trash-empty" aria-hidden="true"></i></button>
+                <input type="text" class="input_word_st" id="one_word" spellcheck="false"
+                    placeholder="введите слово образец" maxlength="12" value="" />
+                <button class=" btn_sm" id="btn1clean" onclick=""><i class="icon-trash-empty"
+                        aria-hidden="true"></i></button>
                 <button id="btn_one" class="">GENERATE</button>
-                <button class=" btn_sm" id="rand_one" onclick=""><i class="icon-shuffle" aria-hidden="true"></i></button>
+                <button class=" btn_sm" id="rand_one" onclick=""><i class="icon-shuffle"
+                        aria-hidden="true"></i></button>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span> </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span> </div>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-left"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
         </div>
         <div class="result-cont-right clearfix" id="res_cr">
             <div class="inputblock">
-                <input type="text" class="input_word_st" id="two_word" spellcheck="false" placeholder="введите слово образец" maxlength="12" value="" />
-                <button class="btn_sm" id="btn2clean" onclick=""><i class="icon-trash-empty" aria-hidden="true"></i></button>
+                <input type="text" class="input_word_st" id="two_word" spellcheck="false"
+                    placeholder="введите слово образец" maxlength="12" value="" />
+                <button class="btn_sm" id="btn2clean" onclick=""><i class="icon-trash-empty"
+                        aria-hidden="true"></i></button>
                 <button id="btn_two" onclick="">GENERATE</button>
                 <button class="btn_sm" id="rand_two" onclick=""><i class="icon-shuffle" aria-hidden="true"></i></button>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
-            <div class="gen-result"> <span class="gen-word"></span> <span class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn" aria-hidden="true"></span></span>
+            <div class="gen-result"> <span class="gen-word"></span> <span
+                    class="gen-save-block gen-save-block-right"><span class="fan icon-anchor" data-type="svgn_btn"
+                        aria-hidden="true"></span></span>
             </div>
         </div>
         <div class="res-footer n_slct">
-            <div id="svListShow" class="btn_bg bbg"><span>сохраненные слова </span><span id="sv_count" class="bbt_count">0</span></div>
+            <div id="svListShow" class="btn_bg bbg"><span>сохраненные слова </span><span id="sv_count"
+                    class="bbt_count">0</span></div>
         </div>
     </div>
     <script src="js/event.js"></script>
