@@ -1,154 +1,38 @@
 
-    
-
-
-/*
-addEventListener('click', function(e){
-    console.log(e.target)
-})*/
-/*
-addEventListener('focus', function(e){
-    console.log('e.targe')
-})
-*/
-
-
-function splitTextToWords(){
-    let arr =[];
-    let prot = document.getElementById("textfield").value;
-        prot.toLowerCase();
-    var nameList = prot.split(' ');
-    arr=clearingText(nameList)
-    
-    return arr;
-}
-
-function clearingText(arrt){
-    let unnecessary_litters=[',','.','\n','(',')','–','?',';','!','[',']','}','{','<','>','-',':','“','„','…','՝','։','—','_','/','\\','\'','\"'];
-    let arr=arrt;
-    len=arr.length
-    for (let j = 0; j<len; j++) 
-        {
-        for (let q = 0; q<arr[j].length; q++) 
-            {
-            
-            for (var u = 0; u < unnecessary_litters.length; u++) 
-                {
-                
-                let unLitter=unnecessary_litters[u];
-                if(unLitter==arr[j][q])
-                    {
-                    //console.log(arr[j][q])
-                    
-                    arr[j]=arr[j].replace(arr[j][q], '');
-
-                    }
-                }
-            }
-
-
-        }
-    
-    return arr;
-
-};
-
-function getText() { //
-    
-    var arr_count=new Map();
-    var fin = [];
-    //var prot = document.getElementById("textfield").value;
-    //var prot = prot.toLowerCase();
-   	let prot =splitTextToWords().join('');
-   	var len=prot.length;
-    var arr=[]
-    
-    //console.log(len);
-    for (var i = prot.length - 1; i >= 0; i--) 
-    {
-        //console.log(prot[i]);
-        var tlit=prot[i];
-        var unnecessary_litters=[',','.',' ','\n','  ','(',')','–','?',';','!','[',']','}','{','<','>','-',':','“','„','…','՝','։','—','_','/']
-        for (var u = unnecessary_litters.length - 1; u >= 0; u--) 
-        {
-        	var unLitter=unnecessary_litters[u];
-        	//console.log(unLitter);
-        	if (tlit!==unLitter) 
-        	{
-            	prot=prot.replace(unLitter, '');
-            }
-        	
-
-
-        }
-
-    //console.log(prot)
-        //if (tlit!==' ' && tlit!=='  ' && tlit!=='\n') {
-    arr.push(tlit);
-
-	}
-
-    
-    arr.sort();
-    //console.log(arr.length);
-    //console.log(arr);
-    var litter=1;
-    for (var j = 0; j<=arr.length - 1; j++) {
-        //console.log(prot[i]);
-        var num_litter=arr[j];
-        //console.log(num_litter, j);
-        if (num_litter==arr[j+1]) {
-            litter=litter+1;
-            //console.log(num_litter, litter);
-        }
-        else if(num_litter!==num_litter+1) {
-                //console.log(num_litter, litter);
-                arr_count.set(num_litter,litter);
-                litter=1;
-
-
-        } 
-
-
-
-        else {
-            continue;
-        }
-        
-        
-
-    }
-
-//console.log(arr_count);
-return arr_count;
-};
-
-
-
-
-
-
-
-
 
 function createDivLitter(){
     removeElemList()
-    var getMap=getText();
-    var target_div = document.getElementById("target");
+    let getMap=[['а',50,1],['б',20,2],['в',20,2],['г',20,2],['д',20,2],['е',20,0]];
+    let target_div = document.getElementById("target");
     for (let pair of getMap) 
         {
-        var newDiv = document.createElement("div");
+        let newSpan = document.createElement("span");  
+        let newInput = document.createElement("input"); 
+        let newDiv = document.createElement("div");
             newDiv.classList.add("litterbox");
-        var newSpan = document.createElement("span");  
-        var newInput = document.createElement("input");  
+            newDiv.setAttribute('isPicked','picked');
+            newDiv.setAttribute('wr_selected','noselect');
+
+            if(pair[2]==2){
+                newDiv.classList.add("btn-primary");
+                newSpan.setAttribute('litter', 'consonant');
+
+            }
+            if(pair[2]==1){
+                newDiv.classList.add("btn-danger");
+                newSpan.setAttribute('litter', 'vovel');
+            }
+        
         newSpan.innerHTML=pair[0];
         newInput.value=pair[1];
         newDiv.append(newSpan);
         newDiv.append(newInput);
         target_div.append(newDiv);
+        
         };
     
     };
+
 
 function removeElemList()//createDivLitter()-->removeElemList()
     {
@@ -254,11 +138,9 @@ textArea.addEventListener("input", statusViev, false);
 
 function statusViev(){
 	let literCount = document.getElementsByClassName('liter-count')[0];
-	
-	var prot = document.getElementById("textfield").value;
-  var len=prot.length;
-  
-  literCount.innerHTML=len;
+	let prot = document.getElementById("textfield").value;
+    let len=prot.length;
+    literCount.innerHTML=len;
 
 
   let wordCount = document.getElementsByClassName('word-count')[0];
